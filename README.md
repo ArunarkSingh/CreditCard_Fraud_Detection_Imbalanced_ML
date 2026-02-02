@@ -90,6 +90,8 @@ This operating point reflects a realistic fraud-screening setup where:
 | Accuracy | ~97% |
 | Missed Fraud Cases | 12 / 95 |
 
+## Confusion Matrix
+
 |               | Predicted Non-Fraud | Predicted Fraud |
 |---------------|--------------------:|----------------:|
 | **Actual Non-Fraud** | 55145 | 1506 |
