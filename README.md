@@ -98,38 +98,38 @@ This operating point reflects a realistic fraud-screening setup where:
 | **Actual Fraud**     | 12    | 83   |
 ---
 
-## 📊 Visualizations
+## Visualizations
 
 ### Exploratory Data Analysis
 
 #### Transaction Amount Distribution
-![Transaction Amount Distribution](analysis_outputs/amount_distribution.png)
+![Transaction Amount Distribution](analysis_outputs/Amt_distribution.png)
 
 #### Feature Correlation Heatmap
-![Correlation Heatmap](analysis_outputs/correlation_heatmap.png)
+![Correlation Heatmap](analysis_outputs/Correlation_Heatmap.png)
 
 #### Time Distribution (Fraud vs Normal)
-![Time Distribution](analysis_outputs/time_distribution.png)
+![Time Distribution](analysis_outputs/Time_distribution.png)
 
 ---
 
 ### Model Interpretation
 
 #### Top Logistic Regression Features
-![Feature Importance](analysis_outputs/feature_importance_lr.png)
+![Feature Importance](analysis_outputs/LR_15Imp_Features.png)
 
 ---
 
 ### Model Evaluation (Threshold Tuned)
 
 #### Normalized Confusion Matrix
-![Confusion Matrix](analysis_outputs/confusion_matrix_tuned.png)
+![Confusion Matrix](analysis_outputs/ConfusionMatrix_tuned.png)
 
 #### Precision–Recall Curve
-![Precision Recall Curve](analysis_outputs/precision_recall_curve.png)
+![Precision Recall Curve](analysis_outputs/Precision_Recall_Curve_tuned.png)
 
 #### ROC Curve
-![ROC Curve](analysis_outputs/roc_curve.png)
+![ROC Curve](analysis_outputs/ROC_Curve_tuned.png)
 
 
 ## Key Takeaways
