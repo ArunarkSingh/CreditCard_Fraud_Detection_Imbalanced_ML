@@ -29,4 +29,69 @@ This project uses the **Credit Card Fraud Dataset** from Kaggle.
 
 **How to obtain the data:**
 1. Download the dataset from Kaggle
-2. Place the file at:
+2. Place the file at: data/raw/creditcard.csv
+
+All preprocessing and evaluation steps are fully reproducible using the provided code.
+
+---
+
+## Methodology
+
+### Model
+- **Logistic Regression**
+- Standardized features using `StandardScaler`
+- `class_weight="balanced"` to address imbalance
+- Implemented using a clean scikit-learn `Pipeline`
+
+### Data Splitting
+- Train / Validation / Test split
+- Stratified sampling to preserve class distribution
+- Threshold tuning performed **only on validation data**
+- Final metrics reported **once on the held-out test set**
+
+---
+
+## Evaluation Strategy
+
+Because fraud detection is highly imbalanced:
+- Accuracy alone is misleading
+- Precision–Recall analysis is essential
+- Recall is prioritized to minimize missed fraud
+
+The following metrics and plots are used:
+- Confusion Matrix
+- ROC Curve (AUC)
+- Precision–Recall Curve (Average Precision)
+- Threshold vs Precision/Recall analysis
+
+---
+
+## Validation-Based Threshold Tuning
+
+The default 0.5 decision threshold was replaced with a **validation-selected threshold** to achieve high fraud recall.
+
+- **Chosen threshold:** ~0.48
+- **Fraud recall (test):** ~87%
+- **Fraud precision (test):** ~5%
+
+This operating point reflects a realistic fraud-screening setup where:
+- False positives are acceptable
+- Missed fraud is costly
+- Downstream review or secondary models may be used
+
+---
+
+## Results Summary (Test Set)
+
+| Metric | Value |
+|------|------|
+| Fraud Recall | ~87% |
+| Fraud Precision | ~5% |
+| Accuracy | ~97% |
+| Missed Fraud Cases | 12 / 95 |
+
+Confusion Matrix:
+| 55145 | 1506 |
+| 12 | 83 |
+
+
