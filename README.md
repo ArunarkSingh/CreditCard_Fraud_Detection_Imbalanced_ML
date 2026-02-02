@@ -102,34 +102,55 @@ This operating point reflects a realistic fraud-screening setup where:
 
 ### Exploratory Data Analysis
 
-#### Transaction Amount Distribution
-![Transaction Amount Distribution](analysis_outputs/Amt_distribution.png)
+**Transaction Amount Distribution**  
+Fraudulent transactions exhibit a narrower amount range with fewer extreme values compared to normal transactions.
+<p align="center">
+  <img src="analysis_outputs/Amt_distribution.png" width="500">
+</p>
 
-#### Feature Correlation Heatmap
-![Correlation Heatmap](analysis_outputs/Correlation_Heatmap.png)
+**Feature Correlation Heatmap**  
+Most PCA-transformed features are weakly correlated, validating the use of linear models.
+<p align="center">
+  <img src="analysis_outputs/Correlation_Heatmap.png" width="500">
+</p>
 
-#### Time Distribution (Fraud vs Normal)
-![Time Distribution](analysis_outputs/Time_distribution.png)
+**Time Distribution (Fraud vs Normal)**  
+Fraud occurrences are spread across time, indicating limited temporal clustering.
+<p align="center">
+  <img src="analysis_outputs/Time_distribution.png" width="500">
+</p>
 
 ---
 
 ### Model Interpretation
 
-#### Top Logistic Regression Features
-![Feature Importance](analysis_outputs/LR_15Imp_Features.png)
+**Top Logistic Regression Features**  
+Transaction amount and several PCA components dominate the decision boundary.
+<p align="center">
+  <img src="analysis_outputs/LR_15Imp_Features.png" width="500">
+</p>
 
 ---
 
 ### Model Evaluation (Threshold Tuned)
 
-#### Normalized Confusion Matrix
-![Confusion Matrix](analysis_outputs/ConfusionMatrix_tuned.png)
+**Normalized Confusion Matrix**  
+Threshold tuning improves recall for fraud cases while controlling false positives.
+<p align="center">
+  <img src="analysis_outputs/ConfusionMatrix_tuned.png" width="450">
+</p>
 
-#### Precision–Recall Curve
-![Precision Recall Curve](analysis_outputs/Precision_Recall_Curve_tuned.png)
+**Precision–Recall Curve**  
+The selected threshold achieves high recall with an acceptable precision tradeoff.
+<p align="center">
+  <img src="analysis_outputs/Precision_Recall_Curve_tuned.png" width="500">
+</p>
 
-#### ROC Curve
-![ROC Curve](analysis_outputs/ROC_Curve_tuned.png)
+**ROC Curve**  
+The model maintains strong separability with an AUC of 0.966.
+<p align="center">
+  <img src="analysis_outputs/ROC_Curve_tuned.png" width="500">
+</p>
 
 
 ## Key Takeaways
