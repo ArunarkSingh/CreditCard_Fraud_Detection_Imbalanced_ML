@@ -90,8 +90,41 @@ This operating point reflects a realistic fraud-screening setup where:
 | Accuracy | ~97% |
 | Missed Fraud Cases | 12 / 95 |
 
-Confusion Matrix:
-| 55145 | 1506 |
-| 12 | 83 |
+|               | Predicted Non-Fraud | Predicted Fraud |
+|---------------|--------------------:|----------------:|
+| **Actual Non-Fraud** | 55145 | 1506 |
+| **Actual Fraud**     | 12    | 83   |
+---
+
+## Key Takeaways
+
+- Extreme class imbalance requires careful evaluation beyond accuracy
+- Threshold tuning is a critical deployment decision, not a modeling afterthought
+- Validation-based threshold selection prevents optimistic bias
+- Logistic Regression remains a strong baseline when used thoughtfully
+
+---
+
+## Tech Stack
+
+- Python
+- scikit-learn
+- Logistic Regression
+- NumPy, Pandas
+- Matplotlib, Seaborn
+
+---
+
+## Notes on Reproducibility
+
+- Raw and processed datasets are intentionally excluded
+- Trained model artifacts are not committed
+- All results can be reproduced by running the notebook after downloading the dataset
+
+---
+
+## License
+
+This repository is shared for **educational and portfolio purposes**.
 
 
