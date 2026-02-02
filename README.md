@@ -98,6 +98,40 @@ This operating point reflects a realistic fraud-screening setup where:
 | **Actual Fraud**     | 12    | 83   |
 ---
 
+## 📊 Visualizations
+
+### Exploratory Data Analysis
+
+#### Transaction Amount Distribution
+![Transaction Amount Distribution](analysis_outputs/amount_distribution.png)
+
+#### Feature Correlation Heatmap
+![Correlation Heatmap](analysis_outputs/correlation_heatmap.png)
+
+#### Time Distribution (Fraud vs Normal)
+![Time Distribution](analysis_outputs/time_distribution.png)
+
+---
+
+### Model Interpretation
+
+#### Top Logistic Regression Features
+![Feature Importance](analysis_outputs/feature_importance_lr.png)
+
+---
+
+### Model Evaluation (Threshold Tuned)
+
+#### Normalized Confusion Matrix
+![Confusion Matrix](analysis_outputs/confusion_matrix_tuned.png)
+
+#### Precision–Recall Curve
+![Precision Recall Curve](analysis_outputs/precision_recall_curve.png)
+
+#### ROC Curve
+![ROC Curve](analysis_outputs/roc_curve.png)
+
+
 ## Key Takeaways
 
 - Extreme class imbalance requires careful evaluation beyond accuracy
