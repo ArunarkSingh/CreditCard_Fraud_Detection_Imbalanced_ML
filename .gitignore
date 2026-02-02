@@ -1,0 +1,19 @@
+# data
+data/
+*.csv
+
+# notebooks
+.ipynb_checkpoints/
+
+# models / artifacts
+models/
+*.joblib
+*.pkl
+
+# plots
+analysis/
+outputs/
+
+# misc
+__pycache__/
+.DS_Store
